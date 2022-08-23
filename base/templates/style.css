@@ -1,0 +1,69 @@
+input[type=submit] {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: .25px;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  width: auto;
+  margin: 1px solid black;
+}
+
+input[type=submit]:hover {
+  box-shadow: -1px -1px 3px rgb(45, 252, 93);
+}
+input[type=text], select, textarea{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  input[type=email]{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+img
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #a8f1c8;
+}
+.res
+{
+box-shadow:1px 1px 4px rgb(45, 252, 93); 
+margin:2px;
+padding:2px;
+border-radius: 10% 10% 0 0;
+width: fit-content;
+
+}
+a
+{
+text-decoration: none;
+margin:1px solid black;
+padding: 2px;
+background-color: #a8f1c8;
+}
+a:hover
+{
+  box-shadow:1px 1px 4px rgb(45, 252, 93); 
+}

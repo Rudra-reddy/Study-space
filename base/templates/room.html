@@ -1,0 +1,22 @@
+{%extends 'head.html'%}
+{%block content%}
+    <h1>{{r}}</h1>
+    <p>@{{r.host}}</p>
+    {%if f %}
+    <form action="unfollow/" method="post">
+        {%csrf_token%}
+        <input type="submit" value="Unfollow">
+    </form>
+    {%endif%}
+    {%if not f%}
+    <form action="follow/" method="post">
+        {%csrf_token%}
+        <input type="submit" value="Follow">
+    </form>
+    {%endif%}
+    {%for i in m%}
+        <p>{{i.body}}</p>
+        <p>{{i.posted}}</p>
+        <hr>
+    {%endfor%}
+{%endblock%}

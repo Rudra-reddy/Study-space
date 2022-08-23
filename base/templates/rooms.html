@@ -1,0 +1,11 @@
+{%extends 'head.html'%}
+{%block content%}
+<form action="" method="POST">
+    {%csrf_token%}
+{{form.as_table}}
+<input type="submit" value="search">
+</form>
+{% for r in rooms%}
+    <a href="{{r.name}}/">{{r}}</a>
+{%endfor%}
+{%endblock%}

@@ -1,0 +1,16 @@
+{%extends 'head.html'%}
+{% block content %}
+<center>
+    <div style="margin:5px;box-shadow:1px 1px 10px rgb(45, 252, 93);width:fit-content">
+        <h2 style="text-align:center;">SIGN UP</h2>
+<form method="POST" action="" style="padding:2px;margin:1px ;">
+{% csrf_token %}
+<table cellspacing="10">
+{{form.as_table}}
+</table>
+<input type="submit" value="register">
+</form>
+
+    </div>
+</center>
+{% endblock %}

@@ -1,0 +1,14 @@
+{%extends 'head.html'%}
+{%block content%}
+    <b>{{q}}</b>
+    <p>@{{q.user}}</p>
+    
+    {%for i in a%}
+    <div class="res"></div>
+        <b>{{i.user}}</b>
+        <p style="margin:2px;">{{i.answer}}</p>
+        <p>{{i.posted}}</p>
+        <hr>
+    </div>
+    {%endfor%}
+{%endblock%}

@@ -1,0 +1,27 @@
+{%extends 'head.html'%}
+{%block content%}
+    <h1>{{q}}</h1>
+    <p>@{{q.user}}</p>
+    <hr>
+    {%for i in a%}
+    <div class="res">
+        <p>@{{i.user}}</p>
+        <p><b>{{i.answer}}</b></p>
+        <p>{{i.posted}}</p>
+    </div>
+        <hr>
+    {%endfor%}
+    <center>
+        <div style="margin:5px;box-shadow:1px 1px 10px rgb(45, 252, 93);width:fit-content">
+            <h2 style="text-align:center;">post an answer</h2>
+    <form action="post_answer/" method="post" id="nav">
+        {%csrf_token%}
+        <table cellspacing="10">
+        {{form.as_table}}
+        
+    </table>
+    <input type="submit" value="post">
+    </form>
+    </div>
+    </center>
+{%endblock%}

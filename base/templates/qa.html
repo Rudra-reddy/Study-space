@@ -1,0 +1,21 @@
+{%extends 'head.html'%}
+{%block content%}
+<h1>Questions posted by you</h1>
+{% for q in yourquestions%}
+    <a href="q/{{q.id}}">{{q}}</a>
+{%endfor%}
+<a href="q/">ask a question</a>
+<h1>Answer these questions to help others</h1>
+<h2>domain specific questions</h2>
+<form action="" method="POST">
+    {%csrf_token%}
+    <table cellspacing="10">
+    {{form.as_table}}
+    </table>
+    <input type="submit" value="apply">
+</form>
+{% for q in questions%}
+    <a href="q/{{q.id}}">{{q}}</a>
+    <hr>
+{%endfor%}
+{%endblock%}

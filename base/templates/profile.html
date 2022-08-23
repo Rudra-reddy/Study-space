@@ -1,0 +1,22 @@
+{%extends 'head.html'%}
+{%block content%}
+@<b>{{user}}</b>
+<div style="background-color:white;text-align:center;padding:2px;">
+<a href="logout/">logout</a>
+<a href="create_room/">create new room</a>
+<a href="QAF/">Q & A forum</a>
+<a href="room/">Browse topics</a>
+</div>
+<h2>Rooms created</h2>
+{% for r in rooms%}
+<div class="res">
+    <a href="room/{{r.name}}/">{{r}}</a>
+    </div>
+{%endfor%}
+<h2>Rooms followed</h2>
+{% for f in follows%}
+<div class="res">
+    <a href="room/{{f.room}}/">{{f.room}}</a>
+</div>
+{%endfor%}
+{%endblock%}
